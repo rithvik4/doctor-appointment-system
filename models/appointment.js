@@ -1,12 +1,11 @@
 const mongoose = require('mongoose');
 
 const appointmentSchema = new mongoose.Schema({
-    patientId: String,
-    name: String,
+    patientName: String,
     age: Number,
     sex: String,
-    doctorId: String,
-    date: Date,
+    doctorId: mongoose.Schema.Types.ObjectId,
+    appointmentDate: Date,
     problemDescription: String
 });
 
